@@ -1,7 +1,7 @@
 //DOM Elements
 
-var resultEl = document.getElementById ('password');
-var generateEl = document.getElementById ('generate');
+var resultEl = document.getElementById('password');
+var generateEl = document.getElementById('generate');
 
 
 
@@ -11,56 +11,50 @@ var generateEl = document.getElementById ('generate');
 
 
 
-var passwordLength = prompt ('How many characters between 10 to 64 would you like to use in your password?');
 
 
-var special = confirm ('would you like to include special characters?');
+var length = prompt('How many characters between 10 to 64 would you like to use in your password?');
 
-
-
-generateEl.addEventListener('click',() =>{
-  var length = +passwordLength.valueof;
-
-  console.log (typeof length);
-})
+var num1 = Number (length);
 
 
 
+console.log (num1);
 
 
+var special = confirm('would you like to include special characters? Click ok to confirm');
+
+if (special === true) {
+  var specialResult = randomSpecialCharacters + length
+} else if (special===false){
+  var specialResult = randomLowerCasedCharacters + randomNumericCharacters + randomUpperCasedCharacters + length
+}
+
+console.log (special);
+
+var lowercase = confirm('would you like to include lowercase characters? Click ok to confirm');
+
+var uppercase = confirm('Would you like to include uppercase characters? Click ok to confirm');
+
+var numbers = confirm('Would you like to include numbers? Click ok to confirm');
+
+var result = special + lowercase + uppercase + numbers;
 
 
-// var randomSelect {
-//   special: randomSpecialCharacters,
-//   lower: randomLowerCasedCharacters,
-//   upper: randomUpperCasedCharacters,
-//   number: randomNumericCharacters
-// };
-
-
-var randomSpecialCharacters = specialCharacters [Math.floor (Math.random()*23)];
-var randomLowerCasedCharacters = lowerCasedCharacters [Math.floor (Math.random()*26)];
-var randomUpperCasedCharacters = upperCasedCharacters [Math.floor (Math.random()*26)];
-var randomNumericCharacters = numericCharacters [Math.floor (Math.random()*10)];
-
-
-
-
-
-// if (lengthResponse=== < 10 || > 64) [
-
-// ]
-
-
-// if (passwordLength ==)
-// function getPasswordOptions() {
-
-// }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
 
 }
+
+
+
+var randomSpecialCharacters = specialCharacters[Math.floor(Math.random() * 23)];
+var randomLowerCasedCharacters = lowerCasedCharacters[Math.floor(Math.random() * 26)];
+var randomUpperCasedCharacters = upperCasedCharacters[Math.floor(Math.random() * 26)];
+var randomNumericCharacters = numericCharacters[Math.floor(Math.random() * 10)];
+
+console.log (randomLowerCasedCharacters);
 
 // Function to generate password with user input
 function generatePassword() {
@@ -79,4 +73,12 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
+
+
+
+generateBtn.addEventListener('click', () => {
+  var num1 = +passwordLength.valueof;
+});
+
+
+// generateBtn.addEventListener('click', writePassword);

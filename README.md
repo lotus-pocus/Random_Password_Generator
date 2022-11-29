@@ -13,6 +13,8 @@ Create an application that an employee can use to generate a random password bas
 
 3. Length of password - at least 10 characters but no more than 64.
 
+<img src = ./assets/images/screenshot.png>
+
 4. Include character types:
       * Lowercase
       * Uppercase
@@ -20,7 +22,7 @@ Create an application that an employee can use to generate a random password bas
       * Special characters ($@%&*, etc)
 
 5. Code should validate for each input and at least one character type should be selected 
-    
+
 6. Once prompts are answered then the password should be generated and displayed in an alert or written to the page
 
 
